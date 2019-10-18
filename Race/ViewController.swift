@@ -43,40 +43,55 @@ class ViewController: UIViewController
 
     @IBAction func startButtonTapped(_ sender: UIButton)
     {
+        // refractor the repetitive code down by using a func..
+        animateCar(theCarLabel: carALabel)
+        animateCar(theCarLabel: carBLabel)
+        animateCar(theCarLabel: carCLabel)
+        animateCar(theCarLabel: carDLabel)
         
-      
-        UIView.animate(withDuration: carALabel.car.speed, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+        // comment the code after refractoring down the code.
+//        UIView.animate(withDuration: carALabel.car.speed, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+//
+//            self.carALabel.center = CGPoint(x: self.carALabel.center.x, y: -100)
+//
+//        }, completion: {action in
+//            self.carALabel.resetPositionAndSpeed()
+//        }
+//        )
+//
+//        UIView.animate(withDuration: carBLabel.car.speed, animations: {
+//            self.carBLabel.center = CGPoint(x: self.carBLabel.center.x, y: -100)
+//        }, completion: {
+//            action in
+//            self.carBLabel.resetPositionAndSpeed()
+//        })
+//
+//        UIView.animate(withDuration: carCLabel.car.speed, animations: {
+//            self.carCLabel.center = CGPoint(x: self.carCLabel.center.x, y: -100)
+//        }, completion: {
+//            action in
+//            self.carCLabel.resetPositionAndSpeed()
+//        })
+//
+//        UIView.animate(withDuration: carDLabel.car.speed, animations: {
+//            self.carDLabel.center = CGPoint(x: self.carDLabel.center.x, y: -100)
+//        }, completion: {
+//            action in
+//            self.carDLabel.resetPositionAndSpeed()
+//        })
+//
 
-            self.carALabel.center = CGPoint(x: self.carALabel.center.x, y: -100)
-
-        }, completion: {action in
-            self.carALabel.resetPositionAndSpeed()
-        }
-        )
         
-        UIView.animate(withDuration: carBLabel.car.speed, animations: {
-            self.carBLabel.center = CGPoint(x: self.carBLabel.center.x, y: -100)
-        }, completion: {
-            action in
-            self.carBLabel.resetPositionAndSpeed()
-        })
-        
-        UIView.animate(withDuration: carCLabel.car.speed, animations: {
-            self.carCLabel.center = CGPoint(x: self.carCLabel.center.x, y: -100)
-        }, completion: {
-            action in
-            self.carCLabel.resetPositionAndSpeed()
-        })
-        
-        UIView.animate(withDuration: carDLabel.car.speed, animations: {
-            self.carDLabel.center = CGPoint(x: self.carDLabel.center.x, y: -100)
-        }, completion: {
-            action in
-            self.carDLabel.resetPositionAndSpeed()
-        })
-        
-
-        
+    }
+    
+    func animateCar(theCarLabel: CarLabel)
+    {
+        UIView.animate(withDuration: theCarLabel.car.speed, animations: {
+             theCarLabel.center = CGPoint(x: theCarLabel.center.x, y: -100)
+         }, completion: {
+             action in
+             theCarLabel.resetPositionAndSpeed()
+         })
     }
     
 }

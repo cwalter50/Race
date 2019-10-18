@@ -80,8 +80,6 @@ class ViewController: UIViewController
 //            self.carDLabel.resetPositionAndSpeed()
 //        })
 //
-
-        
     }
     
     func animateCar(theCarLabel: CarLabel)

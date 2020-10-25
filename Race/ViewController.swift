@@ -10,32 +10,32 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    var carAImageView: CarImageView!
-    var carBImageView: CarImageView!
-    var carCImageView: CarImageView!
-    var carDImageView: CarImageView!
+    var carAImageView: CarImageView = CarImageView()
+    var carBImageView: CarImageView = CarImageView()
+    var carCImageView: CarImageView = CarImageView()
+    var carDImageView: CarImageView = CarImageView()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let carA = Car(theName: "A", theLane: 1, theSpeed: 3, theColor: UIColor.red)
+        let carA = Car(theName: "A", theLane: 1, theSpeed: 3)
 
         carAImageView = CarImageView(c: carA)
         self.view.addSubview(carAImageView)
         
         
-        let carB = Car(theName: "B", theLane: 2, theSpeed: 2, theColor: UIColor.blue)
+        let carB = Car(theName: "B", theLane: 2, theSpeed: 2)
         
         carBImageView = CarImageView(c: carB)
         view.addSubview(carBImageView)
         
-        let carC = Car(theName: "C", theLane: 3, theSpeed: 2, theColor: UIColor.green)
+        let carC = Car(theName: "C", theLane: 3, theSpeed: 2)
         carCImageView = CarImageView(c: carC)
         view.addSubview(carCImageView)
         
-        let carD = Car(theName: "D", theLane: 4, theSpeed: 2, theColor: UIColor.orange)
+        let carD = Car(theName: "D", theLane: 4, theSpeed: 2)
         carDImageView = CarImageView(c: carD)
         view.addSubview(carDImageView)
     }

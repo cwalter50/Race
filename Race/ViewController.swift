@@ -10,11 +10,11 @@ import UIKit
 
 class ViewController: UIViewController
 {
-
-    var carALabel: CarLabel!
-    var carBLabel: CarLabel!
-    var carCLabel: CarLabel!
-    var carDLabel: CarLabel!
+    var carAImageView: CarImageView!
+    var carBImageView: CarImageView!
+    var carCImageView: CarImageView!
+    var carDImageView: CarImageView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -22,32 +22,31 @@ class ViewController: UIViewController
         
         let carA = Car(theName: "A", theLane: 1, theSpeed: 3, theColor: UIColor.red)
 
-        carALabel = CarLabel(c: carA)
-        self.view.addSubview(carALabel)
+        carAImageView = CarImageView(c: carA)
+        self.view.addSubview(carAImageView)
+        
         
         let carB = Car(theName: "B", theLane: 2, theSpeed: 2, theColor: UIColor.blue)
         
-        carBLabel = CarLabel(c: carB)
-        view.addSubview(carBLabel)
+        carBImageView = CarImageView(c: carB)
+        view.addSubview(carBImageView)
         
         let carC = Car(theName: "C", theLane: 3, theSpeed: 2, theColor: UIColor.green)
-        carCLabel = CarLabel(c: carC)
-        
-        view.addSubview(carCLabel)
+        carCImageView = CarImageView(c: carC)
+        view.addSubview(carCImageView)
         
         let carD = Car(theName: "D", theLane: 4, theSpeed: 2, theColor: UIColor.orange)
-        carDLabel = CarLabel(c: carD)
-        
-        view.addSubview(carDLabel)
+        carDImageView = CarImageView(c: carD)
+        view.addSubview(carDImageView)
     }
 
     @IBAction func startButtonTapped(_ sender: UIButton)
     {
         // refractor the repetitive code down by using a func..
-        animateCar(theCarLabel: carALabel)
-        animateCar(theCarLabel: carBLabel)
-        animateCar(theCarLabel: carCLabel)
-        animateCar(theCarLabel: carDLabel)
+        animateCar(theView: carAImageView)
+        animateCar(theView: carBImageView)
+        animateCar(theView: carCImageView)
+        animateCar(theView: carDImageView)
         
         // comment the code after refractoring down the code.
 //        UIView.animate(withDuration: carALabel.car.speed, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
@@ -82,13 +81,13 @@ class ViewController: UIViewController
 //
     }
     
-    func animateCar(theCarLabel: CarLabel)
-    {
-        UIView.animate(withDuration: theCarLabel.car.speed, animations: {
-             theCarLabel.center = CGPoint(x: theCarLabel.center.x, y: -100)
+    func animateCar(theView: CarImageView) {
+        UIView.animate(withDuration: theView.car.speed, animations: {
+             theView.center = CGPoint(x: theView.center.x, y: -100)
          }, completion: {
              action in
-             theCarLabel.resetPositionAndSpeed()
+            
+             theView.resetPositionAndSpeed()
          })
     }
     

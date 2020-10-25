@@ -36,7 +36,6 @@ class Car
     }
     
     // methods with classes
-    
     func getRandomSpeed()
     {
         self.speed = Double.random(in: 2...5)

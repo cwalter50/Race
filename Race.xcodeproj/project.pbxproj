@@ -14,7 +14,6 @@
 		385905B22358A5EA000F50FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 385905B12358A5EA000F50FA /* Assets.xcassets */; };
 		385905B52358A5EA000F50FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385905B32358A5EA000F50FA /* LaunchScreen.storyboard */; };
 		385905BD2358A60F000F50FA /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385905BC2358A60F000F50FA /* Car.swift */; };
-		385905C12358A7A2000F50FA /* CarLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385905C02358A7A2000F50FA /* CarLabel.swift */; };
 		38844F48254620B900864735 /* CarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38844F47254620B900864735 /* CarImageView.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 		385905B42358A5EA000F50FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		385905B62358A5EA000F50FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		385905BC2358A60F000F50FA /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
-		385905C02358A7A2000F50FA /* CarLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarLabel.swift; sourceTree = "<group>"; };
 		38844F47254620B900864735 /* CarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +66,6 @@
 				385905AE2358A5E5000F50FA /* Main.storyboard */,
 				385905BC2358A60F000F50FA /* Car.swift */,
 				38844F47254620B900864735 /* CarImageView.swift */,
-				385905C02358A7A2000F50FA /* CarLabel.swift */,
 				385905B12358A5EA000F50FA /* Assets.xcassets */,
 				385905B32358A5EA000F50FA /* LaunchScreen.storyboard */,
 				385905B62358A5EA000F50FA /* Info.plist */,
@@ -151,7 +148,6 @@
 				385905A92358A5E5000F50FA /* AppDelegate.swift in Sources */,
 				385905BD2358A60F000F50FA /* Car.swift in Sources */,
 				385905AB2358A5E5000F50FA /* SceneDelegate.swift in Sources */,
-				385905C12358A7A2000F50FA /* CarLabel.swift in Sources */,
 				38844F48254620B900864735 /* CarImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

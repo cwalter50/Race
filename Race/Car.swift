@@ -19,22 +19,18 @@ class Car
     // initializers: How do we create new cars
     init()
     {
-        name = "Test"
+        name = "E"
         lane = 1
         speed = 5
-        color = UIColor.red
         getRandomSpeed()
     }
-    
-    init(theName: String, theLane: Int, theSpeed: Double, theColor: UIColor)
+    init(theName: String, theLane: Int, theSpeed: Double)
     {
         name = theName
         lane = theLane
         speed = theSpeed
-        color = theColor
         getRandomSpeed()
     }
-    
     // methods with classes
     func getRandomSpeed()
     {

@@ -14,7 +14,7 @@ class Car
     var name: String
     var lane: Int
     var speed: Double
-    var color: UIColor
+//    var color: UIColor
     
     // initializers: How do we create new cars
     init()
